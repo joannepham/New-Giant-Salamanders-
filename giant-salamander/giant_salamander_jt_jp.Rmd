@@ -94,7 +94,7 @@ ggplot(data = mack_creek_cc_og, aes(x = year, y = counts)) +
 ggsave(here::here("figures", "Yearly Salamander Population.png"))
 
 ```
-*Figure 3. Change in yearly giant salamander abundance between different forest sections(light green: clear cut, dark green: old growth). Both counts increased through the years without many visual differences.*
+***Figure 3.*** *Change in yearly giant salamander abundance between different forest sections(light green: clear cut, dark green: old growth). Both counts increased through the years without many visual differences.*
 
 ### B. Salamander Counts by Channel Classification
 
@@ -129,7 +129,7 @@ mack_creek_class_table <- mack_creek_class_count %>%
 Just looking populations in the final data collection year, 2017, the proportions of giant salamanders were almost 50% when comparing salamander counts for all channel types across clearcut and original growth sections. This suggests salamanders had almost no preferences between the forest sections, which mirrors the visual results found in Results A. However, there is a large different in salamander counts between the different channel types. There were more giant salamanders in channels (CC = `r mack_creek_class_count$n[1]`, OG = `r mack_creek_class_count$n[2]`) than from the numbers in pools (CC = `r mack_creek_class_count$n[3]`, OG = `r mack_creek_class_count$n[4]`) and side channels (CC = `r mack_creek_class_count$n[5]`, OG = `r mack_creek_class_count$n[6]`) combined. 
 
 
-*Table 1. The number of giant salamanders found across different parts of the forest. The proportions were calculated and found at almost 50% between CC and OG sections. However, numbers found in channels greatly exceeded those found in pools or side channels.* 
+***Table 1.*** *The number of giant salamanders found across different parts of the forest. The proportions were calculated and found at almost 50% between CC and OG sections. However, numbers found in channels greatly exceeded those found in pools or side channels.* 
 ```{r}
 # Now finding the proportions
 
@@ -201,6 +201,8 @@ ggplot(data = mack_creek_weight_section,
   geom_qq() +
   facet_wrap(~section) # Facet by section
 ```
+***Figures 4 and 5.*** *Histogram and QQ plot of salamanders weights in different forest sections (CC/OG). Visually, neither histogram shows normal distributions of data and the non-linear QQ plots support that analysis.*
+
 The histograms show that the data of salamander weights for both sections are positively skewed, and the qq plots are exponentially rising. 
 
 ```{r}
@@ -257,6 +259,7 @@ ggplot() + # Leave ggplot blank to graph from multiple data frames
 ggsave(here("figures", "Average Salamander Weight by Section.png"))
 
 ```
+***Figure 6.*** *Distribution of salamader weights in clear cut and old growth forest sections. The red dot and lines represent the mean weight and error bar.*
 
 #### Unpaired T-test:
 
